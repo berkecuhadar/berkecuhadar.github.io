@@ -1,1 +1,0 @@
-# berkecuhadar.github.io
