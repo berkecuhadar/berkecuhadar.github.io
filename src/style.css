@@ -1,0 +1,39 @@
+:root {
+    --bs-primary: #6610f2;
+    --bs-primary-rgb: 102, 16, 242;
+    --bs-btn-bg: #6610f2;
+    --bs-btn-border-color: #6610f2;
+    --bs-btn-hover-bg: #520dc2;
+    --bs-btn-hover-border-color: #4c0bb6;
+    --bs-btn-active-bg: #4c0bb6;
+    --bs-btn-active-border-color: #450ab0;
+    --bs-btn-disabled-bg: #6610f2;
+    --bs-btn-disabled-border-color: #6610f2;
+}
+
+.btn-primary {
+    --bs-btn-bg: #6610f2;
+    --bs-btn-border-color: #6610f2;
+    --bs-btn-hover-bg: #520dc2;
+    --bs-btn-hover-border-color: #4c0bb6;
+    --bs-btn-active-bg: #4c0bb6;
+    --bs-btn-active-border-color: #450ab0;
+    --bs-btn-disabled-bg: #6610f2;
+    --bs-btn-disabled-border-color: #6610f2;
+}
+
+body {
+    font-family: 'Lexend', sans-serif;
+}
+
+.navbar-brand,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    font-family: 'Bungee', cursive;
+    letter-spacing: 1px;
+}
