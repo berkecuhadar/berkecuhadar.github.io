@@ -1,75 +1,11 @@
-<!doctype html>
-<html lang="en" data-bs-theme="dark">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Berke Cuhadar | Jr. Software & Game Developer</title>
-  <!-- Google Fonts: Bungee & Lexend -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Lexend:wght@300;400;500;600&display=swap"
-    rel="stylesheet">
-  <link rel="icon" type="image/png" href="src/logo.png">
-  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="src/style.css">
-</head>
-
-<body>
-
-  <div class="container-md">
-    <nav class="navbar navbar-expand-md">
-      <div class="container-fluid align-items-center">
-        <a class="navbar-brand d-flex flex-column align-items-start text-start py-0 lh-1" href="#">
-          <span>Berke Cuhadar</span>
-          <span class="mt-1"
-            style="font-size: 0.65rem; font-family: 'Lexend', sans-serif; font-weight: 300; letter-spacing: 0px;">Junior
-            Software & Game
-            Developer</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#about">ABOUT</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#projects">PROJECTS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#labs">LABS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#logbook">LOGBOOK</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">CV</a>
-              <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="cv-game-developer.html">Game Developer</a></li>
-                <li><a class="dropdown-item" href="cv-game-support.html">Game Support</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">CONTACT</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </div>
-
-  <hr class="border-secondary opacity-50 my-0">
+---
+layout: default
+title: Berke Cuhadar | Jr. Software & Game Developer
+---
 
   <header class="py-5 bg-dark" id="about">
     <div class="container text-center">
-      <img src="src/logo.png" class="rounded-circle border border-4 border-primary shadow mb-4" alt="picture_of_berke"
+      <img src="/src/logo.png" class="rounded-circle border border-4 border-primary shadow mb-4" alt="picture_of_berke"
         width="150" height="150">
       <h1 class="display-5 fw-bold mb-3 text-primary">Hello, I am Berke</h1>
       <p class="lead mx-auto mb-4" style="max-width: 700px;">
@@ -228,7 +164,7 @@
         </div>
       </div>
 
-      <!--
+      {% comment %}
       <div class="col-lg-5">
         <div
           class="p-4 rounded-4 border border-secondary border-opacity-25 bg-dark-subtle position-relative shadow-lg h-100 d-flex flex-column justify-content-between">
@@ -281,7 +217,7 @@
           </div>
         </div>
       </div>
-      -->
+      {% endcomment %}
 
     </div>
   </section>
@@ -333,19 +269,3 @@
     </div>
   </section>
 
-  <hr class="border-secondary opacity-50 my-0">
-
-  <footer class="container-fluid py-4 bg-dark text-light text-center">
-    <p class="mb-0">&copy; <span id="current-year"></span> Berke Cuhadar</p>
-  </footer>
-
-  <script>
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
-
-</body>
-
-</html>

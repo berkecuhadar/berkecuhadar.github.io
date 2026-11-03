@@ -1,0 +1,12 @@
+title: Berke Cuhadar
+description: Junior Software & Game Developer portfolio, labs and logbook.
+url: https://mythlorestudios.com
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

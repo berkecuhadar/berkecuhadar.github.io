@@ -1,0 +1,17 @@
+_site/
+.jekyll-cache/
+.sass-cache/
+.bundle/
+vendor/
+Gemfile.lock
+
+_templates/
+
+Thumbs.db
+desktop.ini
+.DS_Store
+*.log
+*.swp
+.vscode/
+.idea/
+.claude/settings.local.json
