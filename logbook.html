@@ -1,0 +1,19 @@
+---
+layout: default
+title: Logbook | Berke Cuhadar
+permalink: /logbook/
+---
+{% assign logs = site.logbook | sort: "date" | reverse %}
+<section class="container-fluid py-5">
+  <h1 class="text-center mb-2 fs-2">Logbook</h1>
+  <p class="text-center text-secondary mx-auto mb-5" style="max-width: 600px;">
+    Short development notes: what I worked on, what broke, what I learned.
+  </p>
+  <div class="mx-auto d-flex flex-column gap-3" style="max-width: 780px;">
+    {% for e in logs %}
+    {% include log-row.html entry=e %}
+    {% else %}
+    <p class="text-center text-secondary">Logbook is coming soon.</p>
+    {% endfor %}
+  </div>
+</section>

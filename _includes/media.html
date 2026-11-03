@@ -1,0 +1,15 @@
+<figure class="media-figure {{ include.class }}">
+  {% if include.image and include.image != '' %}
+  <div class="media-frame has-image">
+    <img src="{{ include.image }}" alt="{{ include.alt | default: include.caption }}" loading="lazy">
+  </div>
+  {% else %}
+  <div class="media-frame" style="--ratio: {{ include.ratio | default: '16 / 9' }};">
+    <div class="media-placeholder">
+      <i class="bi bi-image"></i>
+      <span>Photo / GIF</span>
+    </div>
+  </div>
+  {% endif %}
+  {% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
+</figure>

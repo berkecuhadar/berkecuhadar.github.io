@@ -1,0 +1,19 @@
+---
+layout: default
+title: Labs | Berke Cuhadar
+permalink: /labs/
+---
+{% assign labs = site.labs | sort: "date" | reverse %}
+<section class="container-fluid py-5 bg-dark-subtle">
+  <h1 class="text-center mb-2 fs-2">Labs</h1>
+  <p class="text-center text-secondary mx-auto mb-5" style="max-width: 600px;">
+    Experiments, prototypes and tools I build to learn how things work.
+  </p>
+  <div class="row g-4 justify-content-center mx-auto" style="max-width: 1100px;">
+    {% for e in labs %}
+    <div class="col-md-6 col-lg-4">{% include lab-card.html entry=e %}</div>
+    {% else %}
+    <p class="text-center text-secondary">Labs are coming soon.</p>
+    {% endfor %}
+  </div>
+</section>

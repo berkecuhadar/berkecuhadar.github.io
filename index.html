@@ -224,26 +224,36 @@ title: Berke Cuhadar | Jr. Software & Game Developer
 
   <section class="container-fluid py-5 bg-dark-subtle" id="labs">
     <h2 class="text-center mb-5" style="letter-spacing: 1px;">Labs</h2>
+    {% assign labs = site.labs | sort: "date" | reverse %}
     <div class="row g-4 justify-content-center">
-      <div class="col-lg-5 text-center">
-        <a href="#labs" target="_self" class="btn  btn-primary   py-2 fw-bold"
-          style="font-family: 'Bungee', cursive; font-size: 0.85rem;">
-          LABS ARE COMING SOON
-        </a>
-      </div>
+      {% for e in labs limit: 3 %}
+      <div class="col-md-6 col-lg-4 col-xl-3">{% include lab-card.html entry=e %}</div>
+      {% else %}
+      <div class="col-lg-5 text-center text-secondary">Labs are coming soon.</div>
+      {% endfor %}
+    </div>
+    <div class="text-center mt-5">
+      <a href="/labs/" class="btn btn-primary py-2 fw-bold" style="font-family: 'Bungee', cursive; font-size: 0.85rem;">ALL LABS</a>
     </div>
   </section>
+
   <section class="container-fluid py-5" id="logbook">
     <h2 class="text-center mb-5" style="letter-spacing: 1px;">Logbook</h2>
-    <div class="row g-4 justify-content-center">
-      <div class="col-lg-5 text-center">
-        <a href="#logbook" target="_self" class="btn  btn-primary   py-2 fw-bold"
-          style="font-family: 'Bungee', cursive; font-size: 0.85rem;">
-          LOGBOOK IS COMING SOON
-        </a>
+    {% assign logs = site.logbook | sort: "date" | reverse %}
+    <div class="row justify-content-center">
+      <div class="col-lg-8 d-flex flex-column gap-3">
+        {% for e in logs limit: 3 %}
+        {% include log-row.html entry=e %}
+        {% else %}
+        <div class="text-center text-secondary">Logbook is coming soon.</div>
+        {% endfor %}
       </div>
     </div>
+    <div class="text-center mt-5">
+      <a href="/logbook/" class="btn btn-primary py-2 fw-bold" style="font-family: 'Bungee', cursive; font-size: 0.85rem;">FULL LOGBOOK</a>
+    </div>
   </section>
+
   <section class="container-fluid py-5 text-light bg-dark-subtle" id="contact">
     <div class="container text-center py-4 rounded-4 border border-secondary border-opacity-25 bg-dark">
 

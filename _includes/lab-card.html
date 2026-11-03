@@ -1,0 +1,13 @@
+{% assign e = include.entry %}
+<a href="{{ e.url }}" class="entry-card h-100 p-3 rounded-3 bg-dark border border-secondary border-opacity-10 shadow-sm text-decoration-none">
+  {% include media.html image=e.image alt=e.title class="mb-3" %}
+  <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+    <h5 class="mb-0 fs-6 fw-bold text-light">{{ e.title }}</h5>
+    {% if e.status %}<span class="badge bg-primary text-white flex-shrink-0">{{ e.status }}</span>{% endif %}
+  </div>
+  <p class="entry-summary mb-3 text-secondary small">{{ e.summary }}</p>
+  <div class="d-flex flex-wrap gap-1 mt-auto">
+    {% for t in e.tags %}<span class="badge bg-warning text-dark">{{ t }}</span>{% endfor %}
+  </div>
+  <div class="entry-summary text-secondary small mt-2"><i class="bi bi-calendar3"></i> {{ e.date | date: "%-d %b %Y" }}</div>
+</a>

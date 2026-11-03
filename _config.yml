@@ -6,6 +6,26 @@ markdown: kramdown
 kramdown:
   input: GFM
 
+collections:
+  labs:
+    output: true
+    permalink: /labs/:name/
+  logbook:
+    output: true
+    permalink: /logbook/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "labs"
+    values:
+      layout: entry
+  - scope:
+      path: ""
+      type: "logbook"
+    values:
+      layout: entry
+
 exclude:
   - README.md
   - Gemfile

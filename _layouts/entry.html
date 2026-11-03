@@ -1,0 +1,26 @@
+---
+layout: default
+---
+{% assign kind = page.collection %}
+<article class="container-fluid py-5">
+  <div class="mx-auto" style="max-width: 780px;">
+    <a href="/{{ kind }}/" class="btn btn-primary btn-sm mb-4" style="font-family: 'Bungee', cursive;">
+      <i class="bi bi-arrow-left"></i> {{ kind | upcase }}
+    </a>
+
+    <div class="p-4 p-md-5 rounded-4 border border-secondary border-opacity-25 bg-dark shadow-lg">
+      <h1 class="fs-2 mb-3 text-primary">{{ page.title }}</h1>
+      <div class="d-flex flex-wrap align-items-center gap-2 mb-4 text-secondary small">
+        <span><i class="bi bi-calendar3"></i> {{ page.date | date: "%-d %B %Y" }}</span>
+        {% if page.status %}<span class="badge bg-primary text-white">{{ page.status }}</span>{% endif %}
+        {% for t in page.tags %}<span class="badge bg-warning text-dark">{{ t }}</span>{% endfor %}
+      </div>
+
+      {% include media.html image=page.image alt=page.title caption=page.image_caption class="mb-4 media-natural" %}
+
+      <div class="entry-content">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</article>

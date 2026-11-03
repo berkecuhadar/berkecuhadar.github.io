@@ -1,0 +1,17 @@
+{% assign e = include.entry %}
+<a href="{{ e.url }}" class="entry-card entry-row gap-3 align-items-start p-3 rounded-3 bg-dark border border-secondary border-opacity-10 shadow-sm text-decoration-none">
+  <div class="text-center flex-shrink-0 px-2" style="min-width: 64px;">
+    <div class="fs-4 lh-1 text-primary" style="font-family: 'Bungee', cursive;">{{ e.date | date: "%-d" }}</div>
+    <div class="entry-summary text-secondary small text-uppercase">{{ e.date | date: "%b %Y" }}</div>
+  </div>
+  <div class="flex-grow-1">
+    <h5 class="mb-1 fs-6 fw-bold text-light">{{ e.title }}</h5>
+    <p class="entry-summary mb-2 text-secondary small">{{ e.summary }}</p>
+    <div class="d-flex flex-wrap gap-1">
+      {% for t in e.tags %}<span class="badge bg-warning text-dark">{{ t }}</span>{% endfor %}
+    </div>
+  </div>
+  <div class="log-thumb flex-shrink-0">
+    {% include media.html image=e.image alt=e.title ratio="4 / 3" %}
+  </div>
+</a>
