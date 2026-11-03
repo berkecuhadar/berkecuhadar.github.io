@@ -68,7 +68,7 @@ a {
     font-size: 1.25rem;
 }
 
-.entry-content a {
+.entry-content a:not(.btn) {
     font-family: 'Lexend', sans-serif;
     letter-spacing: 0;
     color: var(--bs-primary);
