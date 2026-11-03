@@ -160,6 +160,28 @@ a {
     width: 120px;
 }
 
+.entry-card .media-frame {
+    aspect-ratio: 16 / 9;
+    min-height: 150px;
+    max-height: 240px;
+    background: var(--bs-dark-bg-subtle);
+}
+
+.entry-card .media-frame img {
+    height: 100%;
+    max-height: none;
+}
+
+.log-thumb .media-frame {
+    aspect-ratio: 4 / 3;
+    min-height: 0;
+    max-height: none;
+}
+
+.entry-content .media-frame img {
+    max-height: 520px;
+}
+
 @media (max-width: 575.98px) {
     .log-thumb {
         display: none;
