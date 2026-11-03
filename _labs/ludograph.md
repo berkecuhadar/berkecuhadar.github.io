@@ -13,6 +13,8 @@ Game design documents tend to be walls of text, and diagrams drawn in a general-
 
 It runs entirely in the browser, with no backend. Work is autosaved in local storage and can be saved to and opened from `.ludograph.json` files.
 
+<a href="https://ludograph.mythlorestudios.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="bi bi-box-arrow-up-right"></i> Try it live</a>
+
 Source code: [github.com/berkecuhadar/ludograph](https://github.com/berkecuhadar/ludograph)
 
 ## Where the ideas come from
